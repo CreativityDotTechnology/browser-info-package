@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Browser Info</title>
+</head>
+<body>
+    <script type="module">
+        import getBrowserInfo from './dist/index.js';
+
+        window.onload = () => {
+            const info = getBrowserInfo(navigator.userAgent);
+            document.body.innerHTML = `
+                <p>User Agent: ${info.userAgent}</p>
+                <p>Browser: ${info.browserName}</p>
+                <p>Version: ${info.majorVersion}</p>
+                <p>Is Mobile: ${info.isMobile}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
