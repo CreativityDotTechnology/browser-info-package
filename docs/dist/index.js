@@ -17,11 +17,6 @@ function getBrowserInfo(userAgent) {
         browserName = "Chrome on iOS";
         majorVersion = (userAgent.match(/CriOS\/(\d+)/) || [])[1] || "Unknown";
     }
-    // Android Stock Browser
-    else if (/Android/.test(userAgent) && /like Gecko/.test(userAgent)) {
-        browserName = "Android Stock";
-        majorVersion = (userAgent.match(/Android (\d+)/) || [])[1] || "Unknown";
-    }
     // Safari
     else if (userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") === -1) {
         browserName = "Safari";
