@@ -2,8 +2,8 @@
   "name": "browser-info-package",
   "version": "1.0.0",
   "description": "Simple package to identify browser type and version",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "docs/dist/index.js",
+  "types": "docs/dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "serve": "http-server"
