@@ -7,16 +7,16 @@ describe('Chrome User Agents', () => {
         expect(info.majorVersion).toBe('58');
     });
     it('detects Chrome on macOS', () => {
-        const userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3';
+        const userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36';
         const info = getBrowserInfo(userAgent);
         expect(info.browserName).toBe('Chrome');
-        expect(info.majorVersion).toBe('58');
+        expect(info.majorVersion).toBe('118');
     });
     it('detects Firefox', () => {
-        const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0';
+        const userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/109.0';
         const info = getBrowserInfo(userAgent);
         expect(info.browserName).toBe('Firefox');
-        expect(info.majorVersion).toBe('54');
+        expect(info.majorVersion).toBe('109');
     });
     it('detects Safari', () => {
         const userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/603.2.4 (KHTML, like Gecko) Version/10.1.1 Safari/603.2.4';
